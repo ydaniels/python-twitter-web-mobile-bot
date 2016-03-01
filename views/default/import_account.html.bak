@@ -1,0 +1,9 @@
+{{extend 'layout.html'}}
+<em>Please copy and paste accounts in this format username:password:accountemail:accountemailpassword:firstname:lastname:oauthtoken:oauthsecret:proxy
+<br />
+where only username and password is compulsory<br />
+e.g john:johndoe = for username and password<br />
+e.g john:johndoe:::::::127.0.0.0 = for username,password and proxy
+</em>
+<br />
+{{=form}}

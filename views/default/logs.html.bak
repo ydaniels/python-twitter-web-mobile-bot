@@ -1,0 +1,30 @@
+{{extend 'layout.html'}}
+
+
+<br />
+{{=A('Go to Dashboard', _href=URL('dashboard'))}}
+<br />
+{{=A('Following', _href=URL('follow_logs'))}}
+<br />
+{{=A('Unfollowing', _href=URL('unfollow_logs'))}}
+<br />
+{{=A('Like Keyword', _href=URL('likekeyword_logs'))}}
+<br />
+{{=A('Retweet Keyword', _href=URL('retweetkeyword_logs'))}}
+<br />
+{{=A('Like Home', _href=URL('likehome_logs'))}}
+    <br />
+
+{{=A('Retweet Home ', _href=URL('retweethome_logs'))}}
+        <br />
+
+{{=A(' Auto Comment Logs', _href=URL('autcomment_logs'))}}
+<br />
+
+{{=A('Intelligent follow', _href=URL('intellfollow_logs'))}}
+<br />
+
+{{=A('DM logs', _href=URL('dmuser_logs'))}}
+
+<br />
+    {{=A('Scraper Logs', _href=URL('scraper_logs'))}}

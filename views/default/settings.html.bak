@@ -1,0 +1,4 @@
+<br />
+{{=A('Go Back', _href=URL('dashboard'))}}
+{{extend 'plugin_layouts/layouts/Whitelight.html'}}
+{{=form}}

@@ -1,0 +1,180 @@
+# -*- coding: utf-8 -*-
+# this file is released under public domain and you can use without limitations
+
+#########################################################################
+## This is a sample controller
+## - index is the default action of any application
+## - user is required for authentication and authorization
+## - download is for downloading files uploaded in the db (does streaming)
+#########################################################################
+
+def schedule_run():
+    settings = db().select(db.globalsettings.ALL)
+    sett=tuple([OPTION('Settings '+str(int(x.id))+' with '+str(x.settingsfor)+' accounts' , _value=int(x.id)) for x in settings])
+    
+    form = FORM('What Settings Do You want to Schedule For ? ',SELECT(sett,_name='settings'),BR(),
+             BR(),'What Action or Function Do You Want To Perform',SELECT(OPTION('Follow',_value=1),OPTION('Unfollow',_value=2),OPTION('Like Tweets On Your TimeLine',_value=3),OPTION('Retweet Tweets on Your Timeline',_value=4),OPTION('Like Tweet with a Particular Keyword',_value=7),OPTION('Retweet Tweets with a Particular Keyword',_value=6),OPTION('Auto Reply To a KeyWord',_value=7),OPTION('Intelligent Follow',_value=8),OPTION('DM your New Followers',_value=9),OPTION('Scrape Users',_value=10),_name='functions'),BR(),BR(),INPUT('Minute ',_name='min'),BR(),BR(),INPUT('Hour',_name='hour'),BR(),BR(),INPUT('Day ',_name='day'),BR(),BR(),LABEL(INPUT('Week ',_name='week', _value='*')),BR(),BR(),LABEL('Month 'INPUT(_name='month', _value='*')),BR(),INPUT(_type='submit'))
+    if form.process().accepted:
+        session.visitor_name = form.vars.visitor_name
+        redirect(URL('second'))
+    return dict(form=form)
+
+def index():
+    images = db().select(db.accounts.ALL)
+    return dict(images=images)
+
+@auth.requires_login()
+def import_account():
+    form = FORM(TEXTAREA(_name='accounts', requires=IS_NOT_EMPTY()),
+              INPUT(_type='submit'))
+    format=0
+    if form.process().accepted:
+        accounts = form.vars.accounts
+        accounts=accounts.splitlines()
+        datalist=['username','password','email','email_password','firstname','lastname','oauth_token','oauth_seceret','proxy']
+        result=[]
+        for i in accounts:
+            if ':' in i:
+                data={}
+                spl=i.strip().split(':')
+                if spl[0] and spl[1]:
+                    for l in zip(datalist,spl):
+                        data[l[0]]=l[1]
+                    result.append(data)
+                else:
+                    format+=1
+            else:
+                    format+=1
+        if result:
+            res=db.accounts.bulk_insert(result)
+            
+            response.flash = 'parsed and inputted ',len(res),'and ', format,' not inputted'
+        else:
+            response.flash = 'We could not parse any Line Please check your input'
+        #db.person.insert(name="Alex")
+        #[{'name':'Alex'}, {'name':'John'}, {'name':'Tim'}]
+    elif format > 0:
+        response.flash = 'Some Accounts Format Have Errors',len(format)
+    elif form.errors:
+       response.flash = 'form has errors'
+    else:
+       response.flash = 'please Copy and Paste The Text to this Box'
+    return dict(form=form)
+
+@auth.requires_login()
+def legacy_run():
+    images = db().select(db.accounts.ALL)
+    return dict(images=images)
+
+@auth.requires_login()
+def dashboard():
+    
+    images = db().select(db.accounts.ALL)
+    return dict(images=images)
+
+@auth.requires_login()
+def settings():
+   form = SQLFORM(db.globalsettings)
+   if form.process().accepted:
+       response.flash = 'form accepted'
+   elif form.errors:
+       response.flash = 'form has errors'
+   else:
+       response.flash = 'please fill out the form'
+   return dict(form=form)
+
+
+@auth.requires_login()
+def add_intel_users():
+   form = SQLFORM(db.intelligent_users)
+   if form.process().accepted:
+       response.flash = 'form accepted'
+   elif form.errors:
+       response.flash = 'form has errors'
+   else:
+       response.flash = 'please fill out the form'
+   return dict(form=form)
+
+@auth.requires_login()
+def manage_intel_users():
+     grid = SQLFORM.grid(db.intelligent_users)
+     return locals()
+
+
+@auth.requires_login()
+def manage_users():
+    grid = SQLFORM.grid(db.auth_user)
+    return locals()
+
+@auth.requires_login()
+def manage_accounts():
+    grid = SQLFORM.grid(db.accounts)
+    return locals()
+
+@auth.requires_login()
+def bot_output():
+    grid = SQLFORM.grid(db.scheduler_run)
+    return locals()
+
+@auth.requires_login()
+def run_bot():
+    grid = SQLFORM.grid(db.scheduler_task)
+    return locals()
+
+@auth.requires_login()
+def manage_user_scrapers():
+    grid = SQLFORM.grid(db.users_to_scrape)
+    return locals()
+
+
+@auth.requires_login()
+def manage_settings():
+    grid = SQLFORM.grid(db.globalsettings)
+    return locals()
+@auth.requires_login()
+def accounts():
+   form = SQLFORM(db.accounts)
+   if form.process().accepted:
+       response.flash = 'form accepted'
+   elif form.errors:
+       response.flash = 'form has errors'
+   else:
+       response.flash = 'please fill out the form'
+   return dict(form=form)
+
+def user():
+    """
+    exposes:
+    http://..../[app]/default/user/login
+    http://..../[app]/default/user/logout
+    http://..../[app]/default/user/register
+    http://..../[app]/default/user/profile
+    http://..../[app]/default/user/retrieve_password
+    http://..../[app]/default/user/change_password
+    http://..../[app]/default/user/manage_users (requires membership in
+    http://..../[app]/default/user/bulk_register
+    use @auth.requires_login()
+        @auth.requires_membership('group name')
+        @auth.requires_permission('read','table name',record_id)
+    to decorate functions that need access control
+    """
+    return dict(form=auth())
+
+
+@cache.action()
+def download():
+    """
+    allows downloading of uploaded files
+    http://..../[app]/default/download/[filename]
+    """
+    return response.download(request, db)
+
+
+def call():
+    """
+    exposes services. for example:
+    http://..../[app]/default/call/jsonrpc
+    decorate with @services.jsonrpc the functions to expose
+    supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
+    """
+    return service()

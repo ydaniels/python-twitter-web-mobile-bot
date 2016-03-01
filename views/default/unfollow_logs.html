@@ -1,0 +1,16 @@
+{{extend 'layout.html'}}
+<form>
+  <input type="hidden" name="delete" value="1" />
+  <input type="submit" value="delete" />
+</form>
+<p>
+{{=A('Go to Back To Logs', _href=URL('logs'))}}
+</p>
+<center>
+<ul>
+{{for log in logs:}}
+<li>{{=log}}
+</li>
+{{pass}}
+</ul>
+</center>

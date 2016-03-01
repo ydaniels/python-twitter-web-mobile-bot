@@ -1,0 +1,56 @@
+{{extend 'plugin_layouts/layouts/Clicker.html'}}
+<div>
+    
+
+<div style="float:left;">
+
+<br />
+{{=A('Go to Home', _href=URL('index'))}}
+<br />
+{{=A('Manage User Accounts', _href=URL('manage_users'))}}
+<br />
+{{=A('Manage Bot Settings', _href=URL('manage_settings'))}}
+<br />
+{{=A('Manage Bot Accounts', _href=URL('manage_accounts'))}}
+<br />
+{{=A('Manage intel Accounts', _href=URL('manage_intel_users'))}}
+<br />
+{{=A('Import Accounts', _href=URL('import_account'))}}
+    <br />
+
+{{=A('Schedule and Run Bot Please use this for better efficieny (linux only)', _href=URL('schedule_run'))}}
+        <br />
+
+
+{{=A(' View Schedule and Run  Logs (linux only)', _href=URL('logs'))}}
+<br />
+{{=A(' Delete Schedule and Run  (linux only)', _href=URL('delete_run'))}}
+<br />
+{{=A('Schedule and Run Bot (default please dont use this unless on windows)', _href=URL('run_bot'))}}
+<br />
+
+{{=A('View Previous Bot Actions and Logs(Default Please dont use this unless on windows)', _href=URL('bot_output'))}}    
+
+<br />
+    {{=A('Manage Users You Want To Scrape Their Followers', _href=URL('manage_user_scrapers'))}}
+
+
+<br />
+    {{=A('View General Logs ', _href=URL('logs'))}}
+
+
+<br />
+
+<a href='../appadmin'>Manage Databases</a>
+
+</div>
+<center>
+<ul>
+{{for image in images:}}
+<li>{{=image.username}} has {{=image.followerscount}} followers and following {{=image.followingcount}} users with {{=image.statuses_count}} post and also likes
+    {{=image.statuses_count}} post but suspended  {{=image.suspended}} and needs to verify its account by phone  {{=image.phone}}
+</li>
+{{pass}}
+</ul>
+</center>
+</div>

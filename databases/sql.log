@@ -1,0 +1,792 @@
+timestamp: 2015-11-21T12:51:08.659000
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:51:38.869000
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:52:08.660000
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:53:08.696000
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:54:08.679000
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:55:08.709000
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:56:08.752000
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:56:42.715000
+CREATE TABLE scheduler_task(
+    id INT AUTO_INCREMENT NOT NULL,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args LONGTEXT,
+    vars LONGTEXT,
+    enabled CHAR(1),
+    start_time DATETIME,
+    next_run_time DATETIME,
+    stop_time DATETIME,
+    repeats INT,
+    retry_failed INT,
+    period INT,
+    prevent_drift CHAR(1),
+    timeout INT,
+    sync_output INT,
+    times_run INT,
+    times_failed INT,
+    last_run_time DATETIME,
+    assigned_worker_name VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:57:08.780000
+CREATE TABLE scheduler_task(
+    id INT AUTO_INCREMENT NOT NULL,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args LONGTEXT,
+    vars LONGTEXT,
+    enabled CHAR(1),
+    start_time DATETIME,
+    next_run_time DATETIME,
+    stop_time DATETIME,
+    repeats INT,
+    retry_failed INT,
+    period INT,
+    prevent_drift CHAR(1),
+    timeout INT,
+    sync_output INT,
+    times_run INT,
+    times_failed INT,
+    last_run_time DATETIME,
+    assigned_worker_name VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:58:08.792000
+CREATE TABLE scheduler_task(
+    id INT AUTO_INCREMENT NOT NULL,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args LONGTEXT,
+    vars LONGTEXT,
+    enabled CHAR(1),
+    start_time DATETIME,
+    next_run_time DATETIME,
+    stop_time DATETIME,
+    repeats INT,
+    retry_failed INT,
+    period INT,
+    prevent_drift CHAR(1),
+    timeout INT,
+    sync_output INT,
+    times_run INT,
+    times_failed INT,
+    last_run_time DATETIME,
+    assigned_worker_name VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:59:08.477000
+CREATE TABLE scheduler_task(
+    id INT AUTO_INCREMENT NOT NULL,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args LONGTEXT,
+    vars LONGTEXT,
+    enabled CHAR(1),
+    start_time DATETIME,
+    next_run_time DATETIME,
+    stop_time DATETIME,
+    repeats INT,
+    retry_failed INT,
+    period INT,
+    prevent_drift CHAR(1),
+    timeout INT,
+    sync_output INT,
+    times_run INT,
+    times_failed INT,
+    last_run_time DATETIME,
+    assigned_worker_name VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:59:11.746000
+CREATE TABLE scheduler_task(
+    id INT AUTO_INCREMENT NOT NULL,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args LONGTEXT,
+    vars LONGTEXT,
+    enabled CHAR(1),
+    start_time DATETIME,
+    next_run_time DATETIME,
+    stop_time DATETIME,
+    repeats INT,
+    retry_failed INT,
+    period INT,
+    prevent_drift CHAR(1),
+    timeout INT,
+    sync_output INT,
+    times_run INT,
+    times_failed INT,
+    last_run_time DATETIME,
+    assigned_worker_name VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T12:59:57.888000
+CREATE TABLE scheduler_task(
+    id INT AUTO_INCREMENT NOT NULL,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args LONGTEXT,
+    vars LONGTEXT,
+    enabled CHAR(1),
+    start_time DATETIME,
+    next_run_time DATETIME,
+    stop_time DATETIME,
+    repeats INT,
+    retry_failed INT,
+    period INT,
+    prevent_drift CHAR(1),
+    timeout INT,
+    sync_output INT,
+    times_run INT,
+    times_failed INT,
+    last_run_time DATETIME,
+    assigned_worker_name VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+faked!
+timestamp: 2015-11-21T12:59:57.901000
+CREATE TABLE scheduler_run(
+    id INT AUTO_INCREMENT NOT NULL,
+    task_id INT  , INDEX task_id__idx (task_id), FOREIGN KEY (task_id) REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time DATETIME,
+    stop_time DATETIME,
+    run_output LONGTEXT,
+    run_result LONGTEXT,
+    traceback LONGTEXT,
+    worker_name VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+faked!
+timestamp: 2015-11-21T12:59:57.910000
+CREATE TABLE scheduler_worker(
+    id INT AUTO_INCREMENT NOT NULL,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat DATETIME,
+    last_heartbeat DATETIME,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names LONGTEXT,
+    worker_stats LONGTEXT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+faked!
+timestamp: 2015-11-21T12:59:57.918000
+CREATE TABLE scheduler_task_deps(
+    id INT AUTO_INCREMENT NOT NULL,
+    job_name VARCHAR(512),
+    task_parent INT,
+    task_child INT  , INDEX task_child__idx (task_child), FOREIGN KEY (task_child) REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+faked!
+timestamp: 2015-11-21T13:03:19.030000
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T13:16:48.795000
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-21T21:39:30.370926
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-21T21:39:30.861681
+CREATE TABLE auth_group(
+    id INT AUTO_INCREMENT NOT NULL,
+    role VARCHAR(512),
+    description LONGTEXT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-21T21:39:31.070655
+CREATE TABLE auth_membership(
+    id INT AUTO_INCREMENT NOT NULL,
+    user_id INT  , INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INT  , INDEX group_id__idx (group_id), FOREIGN KEY (group_id) REFERENCES auth_group (id) ON DELETE CASCADE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-21T21:39:31.297882
+CREATE TABLE auth_permission(
+    id INT AUTO_INCREMENT NOT NULL,
+    group_id INT  , INDEX group_id__idx (group_id), FOREIGN KEY (group_id) REFERENCES auth_group (id) ON DELETE CASCADE,
+    name VARCHAR(512),
+    table_name VARCHAR(512),
+    record_id INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-21T21:39:31.420949
+CREATE TABLE auth_event(
+    id INT AUTO_INCREMENT NOT NULL,
+    time_stamp DATETIME,
+    client_ip VARCHAR(512),
+    user_id INT  , INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin VARCHAR(512),
+    description LONGTEXT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-21T21:39:31.538160
+CREATE TABLE auth_cas(
+    id INT AUTO_INCREMENT NOT NULL,
+    user_id INT  , INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on DATETIME,
+    service VARCHAR(512),
+    ticket VARCHAR(512),
+    renew CHAR(1),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-21T21:39:31.728702
+CREATE TABLE accounts(
+    id INT AUTO_INCREMENT NOT NULL,
+    username VARCHAR(250) UNIQUE,
+    password VARCHAR(250),
+    firstname VARCHAR(250),
+    lastname VARCHAR(250),
+    email VARCHAR(250),
+    email_password VARCHAR(250),
+    oauth_token VARCHAR(1000),
+    oauth_seceret VARCHAR(1000),
+    proxy VARCHAR(100),
+    startunfollow INT,
+    unfollowtrack INT,
+    followerscount VARCHAR(512),
+    followingcount VARCHAR(512),
+    likecount VARCHAR(512),
+    suspended VARCHAR(512),
+    phone VARCHAR(512),
+    statuses_count VARCHAR(512),
+    quitunfollow INT,
+    created_by VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-21T21:39:31.866533
+CREATE TABLE globalsettings(
+    id INT AUTO_INCREMENT NOT NULL,
+    settingsfor LONGTEXT,
+    followsize INT,
+    unfollowsize INT,
+    retweetsize INT,
+    likesize INT,
+    dmtext LONGTEXT,
+    keywordtext LONGTEXT,
+    retweettext LONGTEXT,
+    timertofollow LONGTEXT,
+    timertounfollow LONGTEXT,
+    timertolike LONGTEXT,
+    timertoretweet LONGTEXT,
+    timertodm LONGTEXT,
+    autotext LONGTEXT,
+    autosize INT,
+    tweetback LONGTEXT,
+    startfollow INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-21T21:39:31.925493
+CREATE TABLE intelligent_users(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(512),
+    stopat INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-21T21:39:32.023603
+CREATE TABLE users_to_follow(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(512) UNIQUE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-22T02:29:27.126269
+CREATE TABLE users_to_follow(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(512) UNIQUE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-22T02:29:35.237397
+CREATE TABLE users_to_follow(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(512) UNIQUE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-22T02:30:32.457700
+CREATE TABLE users_to_follow(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(512) UNIQUE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-22T02:31:28.617692
+CREATE TABLE users_to_follow(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(128) UNIQUE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-22T02:31:29.008558
+CREATE TABLE users_to_scrape(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(512) UNIQUE,
+    scraped INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-22T02:31:34.954834
+CREATE TABLE users_to_scrape(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(512) UNIQUE,
+    scraped INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-22T02:32:19.512955
+CREATE TABLE users_to_scrape(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(512) UNIQUE,
+    scraped INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+timestamp: 2015-11-22T02:32:47.899063
+CREATE TABLE users_to_scrape(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(128) UNIQUE,
+    scraped INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-22T03:37:19.293696
+ALTER TABLE accounts ADD ingnore LONGTEXT;
+success!
+timestamp: 2015-11-22T03:37:19.950644
+ALTER TABLE accounts ADD stopat INT;
+success!
+timestamp: 2015-11-22T03:37:20.108810
+ALTER TABLE accounts ADD inteluser LONGTEXT;
+success!
+success!
+timestamp: 2015-11-26T16:41:16.355193
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-26T16:41:16.426485
+CREATE TABLE auth_group(
+    id INT AUTO_INCREMENT NOT NULL,
+    role VARCHAR(512),
+    description LONGTEXT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-26T16:41:16.476639
+CREATE TABLE auth_membership(
+    id INT AUTO_INCREMENT NOT NULL,
+    user_id INT  , INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INT  , INDEX group_id__idx (group_id), FOREIGN KEY (group_id) REFERENCES auth_group (id) ON DELETE CASCADE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-26T16:41:16.542911
+CREATE TABLE auth_permission(
+    id INT AUTO_INCREMENT NOT NULL,
+    group_id INT  , INDEX group_id__idx (group_id), FOREIGN KEY (group_id) REFERENCES auth_group (id) ON DELETE CASCADE,
+    name VARCHAR(512),
+    table_name VARCHAR(512),
+    record_id INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-26T16:41:16.623121
+CREATE TABLE auth_event(
+    id INT AUTO_INCREMENT NOT NULL,
+    time_stamp DATETIME,
+    client_ip VARCHAR(512),
+    user_id INT  , INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin VARCHAR(512),
+    description LONGTEXT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-26T16:41:16.757675
+CREATE TABLE auth_cas(
+    id INT AUTO_INCREMENT NOT NULL,
+    user_id INT  , INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on DATETIME,
+    service VARCHAR(512),
+    ticket VARCHAR(512),
+    renew CHAR(1),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-26T16:41:16.831029
+CREATE TABLE accounts(
+    id INT AUTO_INCREMENT NOT NULL,
+    username VARCHAR(250) UNIQUE,
+    password VARCHAR(250),
+    firstname VARCHAR(250),
+    lastname VARCHAR(250),
+    email VARCHAR(250),
+    email_password VARCHAR(250),
+    oauth_token VARCHAR(1000),
+    oauth_seceret VARCHAR(1000),
+    proxy VARCHAR(100),
+    startunfollow INT,
+    unfollowtrack INT,
+    followerscount VARCHAR(512),
+    followingcount VARCHAR(512),
+    likecount VARCHAR(512),
+    suspended VARCHAR(512),
+    phone VARCHAR(512),
+    statuses_count VARCHAR(512),
+    quitunfollow INT,
+    inteluser LONGTEXT,
+    stopat INT,
+    ingnore LONGTEXT,
+    created_by VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-26T16:41:16.935256
+CREATE TABLE globalsettings(
+    id INT AUTO_INCREMENT NOT NULL,
+    settingsfor LONGTEXT,
+    followsize INT,
+    unfollowsize INT,
+    retweetsize INT,
+    likesize INT,
+    dmtext LONGTEXT,
+    keywordtext LONGTEXT,
+    retweettext LONGTEXT,
+    timertofollow LONGTEXT,
+    timertounfollow LONGTEXT,
+    timertolike LONGTEXT,
+    timertoretweet LONGTEXT,
+    timertodm LONGTEXT,
+    autotext LONGTEXT,
+    autosize INT,
+    tweetback LONGTEXT,
+    startfollow INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-26T16:41:17.019210
+CREATE TABLE intelligent_users(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(512),
+    stopat INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-26T16:41:17.088021
+CREATE TABLE users_to_follow(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(128) UNIQUE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-11-26T16:41:17.164845
+CREATE TABLE users_to_scrape(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(128) UNIQUE,
+    scraped INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+success!
+timestamp: 2015-12-04T18:38:02.044601
+CREATE TABLE auth_user(
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    username VARCHAR(128),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-04T18:38:02.080469
+CREATE TABLE auth_group(
+    id INT AUTO_INCREMENT NOT NULL,
+    role VARCHAR(512),
+    description LONGTEXT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-04T18:38:02.123332
+CREATE TABLE auth_membership(
+    id INT AUTO_INCREMENT NOT NULL,
+    user_id INT  , INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INT  , INDEX group_id__idx (group_id), FOREIGN KEY (group_id) REFERENCES auth_group (id) ON DELETE CASCADE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-04T18:38:02.179372
+CREATE TABLE auth_permission(
+    id INT AUTO_INCREMENT NOT NULL,
+    group_id INT  , INDEX group_id__idx (group_id), FOREIGN KEY (group_id) REFERENCES auth_group (id) ON DELETE CASCADE,
+    name VARCHAR(512),
+    table_name VARCHAR(512),
+    record_id INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-04T18:38:02.225681
+CREATE TABLE auth_event(
+    id INT AUTO_INCREMENT NOT NULL,
+    time_stamp DATETIME,
+    client_ip VARCHAR(512),
+    user_id INT  , INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin VARCHAR(512),
+    description LONGTEXT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-04T18:38:02.266347
+CREATE TABLE auth_cas(
+    id INT AUTO_INCREMENT NOT NULL,
+    user_id INT  , INDEX user_id__idx (user_id), FOREIGN KEY (user_id) REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on DATETIME,
+    service VARCHAR(512),
+    ticket VARCHAR(512),
+    renew CHAR(1),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-04T18:38:02.362115
+CREATE TABLE accounts(
+    id INT AUTO_INCREMENT NOT NULL,
+    username VARCHAR(250) UNIQUE,
+    password VARCHAR(250),
+    firstname VARCHAR(250),
+    lastname VARCHAR(250),
+    email VARCHAR(250),
+    email_password VARCHAR(250),
+    oauth_token VARCHAR(1000),
+    oauth_seceret VARCHAR(1000),
+    proxy VARCHAR(100),
+    startunfollow INT,
+    unfollowtrack INT,
+    followerscount VARCHAR(512),
+    followingcount VARCHAR(512),
+    likecount VARCHAR(512),
+    suspended VARCHAR(512),
+    phone VARCHAR(512),
+    statuses_count VARCHAR(512),
+    quitunfollow INT,
+    inteluser LONGTEXT,
+    stopat INT,
+    ingnore LONGTEXT,
+    created_by VARCHAR(512),
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-04T18:38:02.440535
+CREATE TABLE globalsettings(
+    id INT AUTO_INCREMENT NOT NULL,
+    settingsfor LONGTEXT,
+    followsize INT,
+    unfollowsize INT,
+    retweetsize INT,
+    likesize INT,
+    dmtext LONGTEXT,
+    keywordtext LONGTEXT,
+    retweettext LONGTEXT,
+    timertofollow LONGTEXT,
+    timertounfollow LONGTEXT,
+    timertolike LONGTEXT,
+    timertoretweet LONGTEXT,
+    timertodm LONGTEXT,
+    autotext LONGTEXT,
+    autosize INT,
+    tweetback LONGTEXT,
+    startfollow INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-04T18:38:02.467053
+CREATE TABLE intelligent_users(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(512),
+    stopat INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-04T18:38:02.497515
+CREATE TABLE users_to_follow(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(128) UNIQUE,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-04T18:38:02.539581
+CREATE TABLE users_to_scrape(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(128) UNIQUE,
+    scraped INT,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB CHARACTER SET utf8;
+success!
+timestamp: 2015-12-22T15:48:08.736328
+ALTER TABLE globalsettings ADD settingsfor__tmp VARCHAR(512);
+success!
+UPDATE globalsettings SET settingsfor__tmp=settingsfor;
+success!
+ALTER TABLE globalsettings DROP COLUMN settingsfor;
+success!
+ALTER TABLE globalsettings ADD settingsfor VARCHAR(512);
+success!
+UPDATE globalsettings SET settingsfor=settingsfor__tmp;
+success!
+ALTER TABLE globalsettings DROP COLUMN settingsfor__tmp;
+success!
+success!

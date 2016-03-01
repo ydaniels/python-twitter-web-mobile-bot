@@ -1,0 +1,24 @@
+{{extend 'layout.html'}}
+{{=A('Go Back', _href=URL('dashboard'))}}
+<br />
+<i>This would use the normal system cron, it is an hack to provide efficiency,
+if you are familiar with cron on linux you should be able to achieve many wonderful scheduling with this hack<br />
+So This the way it works you select a setting that has an account associated with it. (remember the settingsfor). Then you select<br />
+the task or function you want to perform for that settings and input your schedule<br /> but please make sure you keep track of functions per settings.<br />
+Setting Same function per settings might ruin your account. i.e don't set follow for settings 1 twice</i>
+<p><h3>
+Little Lessons on Cron
+</h3>
+    minute=0,hour =*/4,day = * ( would run the particular function every 4 hours making 6 times in a day 24hours/4hours=6hours)<br />
+    minute=20,hour =*/12,day = * ( would run the particular function at 20 minute (note note every 20 minute but at 20 minute)  of  every 12 hours making 2 times in a day 24hours/12hours=2hours)<br />
+    minute=0 ,hour = *, day= * ( would run every hour)<br />
+    minute =23 ,hour = 4 ,day * ( would run once a day at 4:23 )<br />
+    minute=12, hour =12 , day =2 ( would run at 12 :12 every second day of the week )<br />
+     minute=12, hour =12 , day =*/2 ( would run at 12 :12 every 2 days of the week )<br />
+    Please google more about cron to learn more thanks <br />
+</p>
+
+<br />
+<br />
+<br />
+{{=form}}

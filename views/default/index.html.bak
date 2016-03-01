@@ -1,0 +1,14 @@
+{{extend 'plugin_layouts/layouts/Whitelight.html'}}
+
+<p>
+{{=A('Go to Dashboard', _href=URL('dashboard'))}}
+</p>
+<center>
+<ul>
+{{for image in images:}}
+<li>{{=image.username}} has {{=image.followerscount}} followers and following {{=image.followingcount}} users with {{=image.statuses_count}} post and also likes
+    {{=image.statuses_count}} post but suspended  {{=image.suspended}} and needs to verify its account by phone  {{=image.phone}}
+</li>
+{{pass}}
+</ul>
+</center>
