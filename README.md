@@ -1,4 +1,4 @@
-# python-twitter-web-mobile-bot
+# python-twitter-web-account-bot
 
 This is a twitter account software management that works as a web app. It uses web2py, which means you can use it anywhere including mobile phone.
 
